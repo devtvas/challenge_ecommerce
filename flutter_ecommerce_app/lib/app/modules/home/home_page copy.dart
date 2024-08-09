@@ -13,9 +13,9 @@ class HomePage extends StatefulWidget {
 class _MyHomePageState extends State<HomePage> {
   Widget _icon(IconData icon, {Color color = LightColor.iconColor}) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(13)),
+          borderRadius: const BorderRadius.all(Radius.circular(13)),
           color: Theme.of(context).cardColor,
           boxShadow: AppTheme.shadow),
       child: Icon(

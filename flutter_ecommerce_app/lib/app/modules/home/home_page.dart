@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/app/modular/cart/cart_page.dart';
-import 'package:flutter_ecommerce_app/app/modular/home/home_page.dart';
 import 'package:flutter_ecommerce_app/app/shared/themes/light_color.dart';
 import 'package:flutter_ecommerce_app/app/shared/themes/theme.dart';
 import 'package:flutter_ecommerce_app/app/shared/widgets/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:flutter_ecommerce_app/app/shared/widgets/title_widget.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   _MainPageState createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainPageState extends State<HomePage> {
   bool isHomePageSelected = true;
   Widget _appBar() {
     return Container(
@@ -30,7 +28,7 @@ class _MainPageState extends State<MainPage> {
             child: Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).primaryColor,
-                boxShadow: <BoxShadow>[
+                boxShadow: const <BoxShadow>[
                   BoxShadow(
                       color: Color(0xfff8f8f8),
                       blurRadius: 10,
@@ -80,22 +78,22 @@ class _MainPageState extends State<MainPage> {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             !isHomePageSelected
                 ? Container(
-                    padding: EdgeInsets.all(10),
-                    child: Icon(
+                    padding: const EdgeInsets.all(10),
+                    child: const Icon(
                       Icons.delete_outline,
                       color: LightColor.orange,
                     ),
                   )
-                : SizedBox()
+                : const SizedBox()
           ],
         ));
   }
 
   void onBottomIconPressed(int index) {
-    if (index == 0 || index == 1) {
+    if (index == 0) {
       setState(() {
         isHomePageSelected = true;
       });
@@ -116,7 +114,7 @@ class _MainPageState extends State<MainPage> {
             SingleChildScrollView(
               child: Container(
                 height: AppTheme.fullHeight(context) - 50,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
                       Color(0xfffbfbfb),
@@ -131,19 +129,19 @@ class _MainPageState extends State<MainPage> {
                   children: <Widget>[
                     _appBar(),
                     _title(),
-                    Expanded(
-                      child: AnimatedSwitcher(
-                        duration: Duration(milliseconds: 300),
-                        switchInCurve: Curves.easeInToLinear,
-                        switchOutCurve: Curves.easeOutBack,
-                        child: isHomePageSelected
-                            ? HomePage()
-                            : Align(
-                                alignment: Alignment.topCenter,
-                                child: CartPage(),
-                              ),
-                      ),
-                    )
+                    // Expanded(
+                    //   child: AnimatedSwitcher(
+                    //     duration: const Duration(milliseconds: 300),
+                    //     switchInCurve: Curves.easeInToLinear,
+                    //     switchOutCurve: Curves.easeOutBack,
+                    //     child: isHomePageSelected
+                    //         ? HomePage()
+                    //         : const Align(
+                    //             alignment: Alignment.topCenter,
+                    //             child: CartPage(),
+                    //           ),
+                    //   ),
+                    // )
                   ],
                 ),
               ),
