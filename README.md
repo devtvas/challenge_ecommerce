@@ -1,8 +1,8 @@
 # Desafio para processo seletivo da DEVNOLOGY.
 
-[![Flutter](https://img.shields.io/badge/Flutter-Bloc-blue?style=for-the-badge&logo=flutter&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/JavaScript) [![Node](https://img.shields.io/badge/Node-Bloc-green?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![Flutter](https://img.shields.io/badge/Flutter-Bloc-blue?style=for-the-badge&logo=flutter&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/JavaScript) [![Node](https://img.shields.io/badge/Node-ORM-green?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 
-## Overview 
+## Design 
 
 ![](./assets/logo.png)
 
@@ -37,6 +37,22 @@
 $ flutter pub get
 ```
 
+## Estrutura de pastas
+
+```
+|   lib
+| — main.dart
+| — app/
+| — — app_module.dart
+| — — app_widget.dart
+| — — modules/
+| — — — home/
+| — — — — home_cubit.dart
+| — — — — home_module.dart
+| — — — — home_page.dart
+| — — — others/
+| — — shared/
+```
 
 ## Links relacionados
 
